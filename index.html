@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- font awsome -->
+<script src="https://kit.fontawesome.com/91c49206b2.js" crossorigin="anonymous"></script>
+<!-- font awsome -->
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header start -->
+     <header id="header">
+        <div class="navbar bg-[#EDEDED]">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+        
+              </div>
+              <a class="cursor-pointer"><img src="img/Group 1.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+            </div>
+            <div class="navbar-end gap-5 hidden lg:flex">
+             <a class="btn" href="#faq"> <img src="img/fa-circle-question.png" alt=""> FAQ</a>
+              <a class="btn" href="#learn"><img src="img/fa-book-open.png" alt="">Learn</a>
+              <a id="logout" onclick="logout()" class="btn"><img src="img/fa-arrow-right-from-bracket.png" alt="">Logout</a>
+            </div>
+          </div>
+     </header>
+    <!-- header end -->
+
+
+
+    <!-- banner start -->
+     <section class="container mx-auto" id="banner">
+        <div class="hero">
+            <div class="hero-content flex-col lg:flex-row-reverse ">
+             
+                <img
+                src="img/hero-student.png"
+                class="" />
+          
+              <div class="">
+                <h1 class="text-5xl font-bold"><span class="text-sky-500">English</span> Is Easy</h1>
+                <p class="py-6">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+                <input id="name-field" type="text" placeholder="Enter Your Name " class="input input-bordered w-full" />
+                <label class="input input-bordered flex items-center gap-2 mt-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="h-4 w-4 opacity-70">
+                      <path
+                        fill-rule="evenodd"
+                        d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <input id="password-field" type="password" class="grow" value="" />
+                  </label>
+                  <button class="btn bg-blue-700 text-white mt-5" id="startedButton" onclick="showAll()">Get Started</button>
+              </div>
+            </div>
+          </div>
+     </section>
+    <!-- banner end -->
+
+
+    <!-- lesson -->
+    <section class="container mx-auto hidden" id="learn">
+      <h2 class="text-center text-4xl font-bold">
+        <span class="text-blue-700">Let's</span> Learn Vocabularies
+      </h2>
+    
+      <!-- Lesson Buttons -->
+      <div id="lesson-buttons" class="text-center"></div>
+    
+      
+      <div id="lesson-card-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5"></div>
+    
+     
+      <div id="empty-message">
+        <div class="bg-[#F8F8F8] text-center p-24">
+          <h4 class="text-[#79716B]">আপনি এখনো কোন Lesson Select করেন নি</h4>
+          <h2 class="text-4xl font-bold">একটি Lesson Select করুন।</h2>
+        </div>
+      </div>
+    </section>
+    <!-- lesson -->
+
+    <!-- Open the modal using ID.showModal() method -->
+<button id="showModal" class="btn hidden" onclick="customeModal.showModal()">open modal</button>
+<dialog id="customeModal" class="modal">
+  <div class="modal-box">
+   <div id="modalContent">
+    
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-[#422AD5] text-white rounded-xl ">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    <!-- Faq start -->
+    <section class="container mx-auto mb-64 hidden" id="faq" >
+        <h2 class="text-center text-4xl font-bold mb-20"> <span class="text-blue-800">Frequently</span> Asked Questions</h2>
+
+        <div class="space-y-5">
+            <div class="collapse collapse-plus bg-base-200 ">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-medium">the difference between var, let, and const</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium"> the difference between map(), forEach(), and filter()</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">explain arrow functions and how they are different from regular functions</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">how JavaScript Promises work</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">how closures work in JavaScript</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+        </div>
+     </section>
+    <!-- Faq end -->
+
+
+    <!-- footer start -->
+    <footer id="footer" class="footer bg-[#FFF] justify-between p-10">
+        <aside>
+         <img src="img/Group 1.png" alt="">
+          <p class="text-black text-[20px] font-medium">
+            ইংরেজি শিখুন সহজে
+            <br />
+            Providing ED-Tech Applications since 2025
+          </p>
+        </aside>
+        <nav>
+          <h6 class="footer-title text-black">Follow us</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+                <i class="fa-brands fa-facebook text-black text-2xl"></i>
+            </a>
+            <a>
+                <i class="fa-brands fa-youtube text-black text-2xl"></i>
+            </a>
+            <a>
+                <i class="fa-brands fa-instagram text-black text-2xl"></i>
+            </a>
+          </div>
+        </nav>
+      </footer>
+    <!-- footer end -->
+
+    <script src="script/main.js"></script>
+</body>
+</html>
