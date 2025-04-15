@@ -106,15 +106,16 @@ if (lessons.length === 0) {
   }
   
   const loadDetails = async(lessonid)=>{
-
-  
+   
+    
     const uri = `https://openapi.programming-hero.com/api/word/${lessonid}`
     const response = await fetch(uri);
     const data = await response.json();
-   console.log(data);
+    
     displayDetails(data.data);
     
   }
+
   
   const displayDetails =(detail)=>{
     
@@ -127,7 +128,7 @@ if (lessons.length === 0) {
     
     </div>
     <h3 class="mb-2 text-2xl font-semibold">Meaning</h3>
-     <h4 class="mb-8 text-2xl font-medium">${detail.meaning}</h4>
+     <h4 class="mb-8 text-2xl font-medium">${detail.meaning? detail.meaning : "No Word Found"}</h4>
      <h3 class="mb-2 text-2xl font-semibold">Example</h3>
      <h4 class="mb-8 text-2xl">${detail.sentence}</h4>
      <h3 class="mb-2 text-2xl font-medium">সমার্থক শব্দ গুলো</h3>

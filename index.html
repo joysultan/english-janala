@@ -115,6 +115,8 @@
     </section>
     <!-- lesson -->
 
+
+
     <!-- Open the modal using ID.showModal() method -->
 <button id="showModal" class="btn hidden" onclick="customeModal.showModal()">open modal</button>
 <dialog id="customeModal" class="modal">
@@ -140,35 +142,60 @@
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title text-xl font-medium">the difference between var, let, and const</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>let
+                    You can reassign the value.
+                    
+                    You can update the variable later.
+                    
+                    Used when the value will change.  const
+                    You cannot reassign the variable.
+                    
+                    Used when the value should stay the same.
+                    
+                    However, objects and arrays declared with const can still be changed inside.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium"> the difference between map(), forEach(), and filter()</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>forEach()
+                    Purpose: Runs a function on each element, but does not return a new array.  map()
+                    Purpose: Runs a function on each element and returns a new array. filter()
+                    Purpose: Tests each element and returns a new array of elements that pass a condition.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium">explain arrow functions and how they are different from regular functions</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>Arrow functions are a shorter way to write functions in JavaScript, but they also behave a bit differently  Regular Function: function add(a, b) {
+                    return a + b;
+                  } Arrow Function: const add = (a, b) => {
+                    return a + b;
+                  }</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium">how JavaScript Promises work</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>A Promise is an object that represents a value that might be available now, later, or never.
+
+                    It has 3 states:
+                    
+                    Pending – still running.
+                    
+                    Fulfilled – completed successfully.
+                    
+                    Rejected – failed with an error.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title text-xl font-medium">how closures work in JavaScript</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>A closure is when a function “remembers” variables from its outer (parent) scope, even after that outer function has finished running.</p>
                 </div>
               </div>
         </div>
